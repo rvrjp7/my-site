@@ -1,14 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import { MainContainer } from './components/HomePage/styles';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <h1>Raviraj Patil</h1>
-        <h3>Something is cooking..... 🍲</h3>
+        <h6>Something is cooking..... 🍲</h6>
       </header>
+      <Navbar/>
+      <MainContainer/>
     </div>
   );
 }
