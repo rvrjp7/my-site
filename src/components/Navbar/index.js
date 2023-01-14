@@ -1,11 +1,13 @@
 import React from "react";
-import { StyledLink, NavContainer } from "./styles";
+import { Link } from "react-router-dom";
+import {  NavContainer } from "./styles";
 function Navbar(){
     return (
         <NavContainer>
-            <StyledLink href="#home">Home</StyledLink>
-            <StyledLink href="#hobbies">Favourites</StyledLink>
-            <StyledLink href="#about">About</StyledLink>
+            <Link to="home">Home</Link>
+            {/* <Link to="favourites">Favourites</Link> */}
+            <Link to="engagement">Engagement</Link>
+            {/* <Link to="about">About</Link> */}
         </NavContainer>
     )
 }

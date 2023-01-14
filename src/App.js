@@ -1,17 +1,21 @@
+import { BrowserRouter as Router, Route, Routes  } from "react-router-dom";
 import './App.css';
+import Engagement from "./components/Engagement";
 import { MainContainer } from './components/HomePage/styles';
 import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Raviraj Patil</h1>
-        <h6>Something is cooking..... 🍲</h6>
-      </header>
-      <Navbar/>
-      <MainContainer/>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar/>
+        <Routes>
+          <Route path="/" exact element={<MainContainer/>} />
+          <Route path="/home" exact element={<MainContainer/>} />
+          <Route path="/engagement" exact element={<Engagement/>} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
